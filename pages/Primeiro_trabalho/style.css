@@ -1,0 +1,314 @@
+:root {
+    --main-color: #d3ad7f;
+    --black: #13131a;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(255,255,255,0.3);
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+section {
+    padding: 3rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* HEADER */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-bottom: var(--border);
+    background-color: var(--bg);
+    height: 100px;
+}
+
+.header section {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    height: 60px;
+    position: relative;
+}
+
+/* LOGO */
+.logo {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: absolute;
+    left: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* NAVBAR sem flex */
+.navbar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.navbar a {
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+    display: inline-block;
+    margin-top: 25px;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
+    font-size: 1.9rem;
+}
+
+/* ICONS sem flex */
+.icons {
+    position: absolute;
+    right: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    margin-top: 25px;
+}
+
+.icons img {
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.icons img:hover {
+    width: 40px;
+    height: 40px;
+}
+
+/* BOTÃO */
+.btn {
+    background-color: var(--main-color);
+    color: black;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+    border-radius: 10px;
+    
+    
+}
+
+.btn:hover {
+    letter-spacing: 0.1rem;
+    transition: .5;
+}
+
+/* HOME */
+.home-container {
+    background: url(./img/home-img2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.home-container section {
+    min-height: 100vh;
+    margin-top: 9rem;
+    position: relative;
+}
+
+.home-container .content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 50rem;
+}
+
+.content h3 {
+    color: #d8970c;
+    font-size: 6rem;
+}
+
+.content p {
+    color: #fcbb0a;
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+#lorem {
+    background-color: rgb(31, 24, 3);
+    opacity: 80%;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+#loremp {
+    color: #fff;
+}
+
+/* TÍTULOS */
+.title {
+    font-size: 4rem;
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.title span {
+    color: white;
+}
+
+/* ABOUT sem flex */
+.about .row {
+    background-color: var(--black);
+    overflow: hidden; /* limpar floats */
+}
+
+.about .container-image {
+    float: left;
+    width: 50%;
+}
+
+.about .container-image img {
+    width: 100%;
+}
+
+.about .content {
+    float: left;
+    width: 50%;
+    padding: 2rem;
+}
+
+.about .content h3 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.about .content p {
+    font-size: 1.6rem;
+    color: #fff;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+/* MENU sem grid */
+.menu .box-container {
+    overflow: hidden;
+}
+
+.menu .box-container .box {
+    width: 30%;
+    float: left;
+    margin: 1.5%;
+    text-align: center;
+    border: var(--border);
+    padding: 5rem;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.menu .box-container .box img {
+    height: 10rem;
+}
+
+.menu .box-container .box h3 {
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.menu .box-container .box .price {
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+
+.menu .box-container .box .price span {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+.menu .box-container .box:hover {
+    background-color: wheat;
+    border-radius: 15px;
+}
+
+.menu .box-container .box:hover > * {
+    color: var(--black);
+}
+
+/* REVIEW sem grid */
+.review .box-container {
+    overflow: hidden;
+}
+
+.review .box-container .box {
+    width: 30%;
+    float: left;
+    margin: 1.5%;
+    border: var(--border);
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.review .box-container .box p {
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 2rem 0;
+    line-height: 2.0;
+    font-weight: lighter;
+}
+
+.review .box-container .box h3 {
+    color: #fff;
+    font-size: 1.9rem;
+    margin: 1rem 1rem;
+}
+
+.review .box-container .box .user {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 30%;
+}
+
+/* ADDRESS sem flex */
+.address {
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer .share {
+    padding: 1rem 0;
+}
+
+.footer .share img {
+    margin: 0.3rem;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
+.footer .share img:hover {
+    background-color: var(--main-color);
+}

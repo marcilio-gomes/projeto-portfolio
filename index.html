@@ -9,18 +9,20 @@
 </head>
 
 <body>
-    <header>
+    <header id="home">
         <div class="section">
             <nav>
+
                 <ul>
-                    <li>Home</li>
-                    <li>Sobre</li>
-                    <li>projects</li>
-                    <li>contact</li>
+
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre mim</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
         </div>
-        <h1>Procurando um Programador Front-End?</h1>
+        <h1>Procurando um Desenvolvedor Web?</h1>
         <svg class="arrows">
             <path class="a1" d="M0 0 L30 32 L60 0"></path>
             <path class="a2" d="M0 20 L30 52 L60 20"></path>
@@ -28,7 +30,7 @@
         </svg>
     </header>
     <main>
-        <div class="content-container">
+        <div class="content-container" id="sobre">
             <div class="profile-container">
                 <div class="profile-content">
                     <div class="profile-card">
@@ -75,9 +77,98 @@
                 </p>
             </div>
         </div>
+        <div class="content-container" id="projects">
+            <div class="project-container">
+                <div class="project-content">
 
+                    <div class="position-container right">
+                        <div class="project-card">
+                            <a href="./pages/Primeiro_trabalho/index.html" target="_blank">
+                                <image class="project-image" src="./img/primeiro.png" />
+                            </a>
+                            <p class="project-text">
+                                Um site moderno e aconchegante para uma cafeteria, desenvolvido para apresentar o
+                                cardápio, destacar os principais produtos e transmitir a identidade do ambiente. O
+                                projeto foca em um design agradável, navegação simples, proporcionando uma
+                                boa experiência ao usuário.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="position-container left">
+                        <div class="project-card card-reverse">
+                            <a href="./pages/Segundo_trabalho/index.html" target="_blank">
+                                <image class="project-image image-reverse" src="./img/segundo.png" />
+
+                            </a>
+                            <p class="project-text">
+                                Página dedicada à trajetória de Cristiano Ronaldo, um dos maiores jogadores de futebol
+                                de todos os tempos. O site apresenta sua história, conquistas, clubes por onde passou,
+                                recordes e principais momentos da carreira, focado em destacar sua importância no
+                                esporte mundial.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="position-container right">
+                        <div class="project-card">
+                            <a href="./pages/Terceiro_trabalho/index.html" target="_blank">
+                                <image class="project-image" src="./img/terceiro.png" />
+
+                            </a>
+
+
+                            <p class="project-text">
+                                Site promocional do filme Batman, desenvolvido para oferecer uma experiência imersiva
+                                aos fãs. A plataforma permite assistir ao trailer oficial, visualizar galerias de fotos,
+                                conhecer detalhes do filme e realizar a compra de ingressos de forma prática e segura,
+                                com design moderno, responsivo e inspirado no universo do personagem.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="content-container" id="contato">
+            <div class="form-container">
+                <form action="https://formspree.io/f/xldqzqwa" method="POST" target="_blank" id="meuFormulario">
+                    <h1>Contato</h1>
+                    <label>
+                        Email:
+                        <input type="email" name="email">
+                    </label>
+
+                    <label>
+                        Nome:
+                        <input type="text" name="name">
+                    </label>
+
+                    <label>
+                        Telefone:
+                        <input type="text" name="fone">
+                    </label>
+
+                    <label>
+                        Mensagem:
+                        <textarea name="message"></textarea>
+                    </label>
+                    <!-- your other form fields go here -->
+                    <button type="submit" id="meuFormulario">Enviar</button>
+                </form>
+
+
+            </div>
+        </div>
+
+        <footer class="rodape">
+            <span id="texto-rodape">© Feito com ♥ by Marcílio Gomes</span>
+
+        </footer>
 
     </main>
+    <script src="./script.js"></script>
 </body>
 
 </html>
