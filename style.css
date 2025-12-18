@@ -35,7 +35,8 @@ ul {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    width: 700px;
+    max-width: 700px;
+    width: 100%;
 }
 
 li {
@@ -109,15 +110,27 @@ li:hover {
     -webkit-animation-delay:  0s;
 }
 
-/* conteúdo da main */
 main {
     height: 100vh;
 }
 
 
 .content-container {
-    height: 100vh;
-    background-color: #333;
+    min-height: 100vh;
+    height: auto;
+    background-color: #333; 
+    display: flex;
+    flex-direction: column;
+}
+.profile-container, .project-container, .form-container {
+    padding: 60px 0; 
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; 
 }
 
 .profile-container {
@@ -138,14 +151,16 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 350px;
+    max-width: 350px;
+    width: 100%;
     background: #fff;
     padding: 30px;
     border-radius: 8px;
 }
 
 .profile-image {
-    width: 150px;
+    max-width: 150px;
+    width: 100%;
     height: auto;
     border-radius: 50%;
     border: 2px solid #4F46E5;
@@ -208,7 +223,6 @@ main {
 }
 
 
-/* Main parte dos projetos */
 
 .project-container {
     width: 100%;
@@ -279,7 +293,6 @@ main {
     margin-left: 20px;
 }
 
-/* Main parte do contato */
 
 .form-container {
     width: 100%;
@@ -367,23 +380,36 @@ button:hover {
 }
 
 
+
+
+
 @media (max-width: 833px) {
+
+    html, body {
+        overflow-x: hidden;
+    }
 
     nav {
         width: 100%;
         margin: 20px 20px;
+        margin-left: 20px;
     }
     
     .section {
         display: flex;
-    
-        width: 100vw;
         flex-direction: row;
     }
 
+    #titulo {
+        text-align: center;
+        font-size: 20px;
+        
+
+    }
+    
 
     ul {
-    
+        
         margin: 0;
         padding: 0;
         list-style: none;
@@ -400,6 +426,7 @@ button:hover {
     a {
         display: block;
         padding: 10px;
+   
     }
     
     h1 {
@@ -409,7 +436,7 @@ button:hover {
 
 
     .profile-container {
-        
+            
         flex-direction: column;
         height: auto;
         align-items: center;
@@ -423,6 +450,8 @@ button:hover {
         width: 100%;
         height: auto;
     }
+
+    
 
     .profile-card{
         margin-top: 20px;
@@ -448,11 +477,14 @@ button:hover {
     }
 
     
+    img {
+        margin-right: 20px;
+    }
 
     .project-card {
         width: 100%;
         display: flex;
-        margin-right: 0px;
+        margin-right: 20px;
         flex-direction: column;
         box-sizing: border-box;
         height: auto;
@@ -484,15 +516,28 @@ button:hover {
 
     form {
         margin: 30px;
+        width: 300px;
     }
 
 
 }
 
 @media (min-width: 834px) and (max-width: 1320px) {
+    a {
+        font-size: 30px;
+    }
+
+    ul {
+        width: 500px;
+    }
     
     h1 {
         font-size: 50px;
+    }
+
+    .profile-container {
+        display: flex;
+        flex-direction: row;
     }
 
     .profile-sinopse{
@@ -503,7 +548,7 @@ button:hover {
         margin-left: 30px;
     }
 
-     .project-content {
+    .project-content {
         width: 100%;
         height: auto;
         display: flex;
@@ -512,7 +557,129 @@ button:hover {
         margin: 30px;
     }
 
+    .project-card {
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    
+
 }
 
+@media (min-width: 1600px) {
+    
+    html {
+        font-size: 22px; 
+    }
 
 
+    nav {
+        width: 80%; 
+        max-width: 1800px; 
+        display: flex;
+        justify-content: center;
+    }
+
+    ul {
+        max-width: 1000px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between; 
+        gap: 60px; 
+    }
+
+   
+    li a {
+        font-size: 38px !important; 
+        white-space: nowrap; 
+    }
+
+    
+    header {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    
+    .profile-container {
+        flex-direction: row !important; 
+        gap: 100px;
+        padding: 0 50px;
+    }
+
+    .profile-card {
+        max-width: 450px; 
+        padding: 40px;
+    }
+
+    .profile-button {
+        width: auto; 
+        min-width: 250px; 
+        padding: 0 20px; 
+        height: 70px; 
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .profile-sinopse {
+        width: 900px;
+        font-size: 38px;
+        text-align: left;
+    }
+
+    .project-content {
+        max-width: 1800px;
+        gap: 60px;
+    }
+
+    .project-card {
+        max-width: 1400px;
+        width: 100%;
+        height: auto; 
+        min-height: 350px;
+        padding: 30px;
+    }
+
+    .project-image {
+        width: 550px;
+    }
+
+    .project-text {
+        font-size: 28px;
+        margin-left: 40px;
+    }
+
+    
+    form {
+        width: 850px;
+        height: auto; 
+        min-height: 850px; 
+        padding: 50px;
+        justify-content: space-evenly;
+    }
+
+    form h1 { font-size: 60px; }
+    
+    label { 
+        font-size: 28px; 
+        margin-bottom: 20px; 
+    }
+
+    input { 
+        height: 50px; 
+        font-size: 22px; 
+    }
+
+    textarea { 
+        height: 400px; 
+        min-height: 400px; 
+        font-size: 22px; 
+    }
+
+    button[type="submit"] {
+        height: 70px;
+        font-size: 28px;
+    }
+}
