@@ -308,7 +308,7 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgb(209, 180, 51);
+    background-color: #442AB8;
     width: 500px;
     height: 650px;
     border-radius: 8px;
@@ -322,7 +322,7 @@ h1 {
 
 label {
     display: block;
-    color: #000000;
+    color: #fff;
     margin-bottom: 10px;
 }
 
